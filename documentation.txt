@@ -2,3 +2,17 @@ ELEC 477 Assignment 1
 
 Documentation
 
+Signature of kvPut: 
+    -> bool kvPut(int32_t key, const uint8_t * value, uint16_t vlen);
+       rtype = boolean (success or failure)
+       param 1 = 32 bit integer key
+       param 2 = array of 8 bit unsigned integers
+       param 3 = 16 bit unsigned integer length of the array?
+
+kvGet:
+    -> struct kvGetResult{
+            bool status;
+            uint8_t * value;
+            uint16_t vlen;
+        };
+        kvGetResult kvGet(int32_t key);
