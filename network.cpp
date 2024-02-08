@@ -434,7 +434,6 @@ void Node::setAddress(string addr){
 }
 
 void Node::addService(shared_ptr<Service> s){
-    cout << "in add Service:" << endl;
     services.push_back(s);
 }
 
@@ -450,7 +449,6 @@ Node::Node(string nodeName):alive(true){
 }
 
 void Node::startServices(){
-   cout << "in Node start " << endl;
    cout << "number of services is " << services.size() << endl;
    vector<shared_ptr<Service>>::iterator it;
    // global maps are not thread safe
